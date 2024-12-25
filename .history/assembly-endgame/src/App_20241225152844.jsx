@@ -3,7 +3,6 @@ import Status from "./components/Status.jsx";
 import LanguageTags from "./components/LanguageTags.jsx";
 import WordDisplay from "./components/WordDisplay.jsx";
 import Keyboard from "./components/Keyboard.jsx";
-import NewGameButton from "./components/NewGameButton.jsx";
 
 export default function App() {
   const [currentWord, setCurrentWord] = useState("");
@@ -21,7 +20,6 @@ export default function App() {
       <LanguageTags />
       <WordDisplay currentWord={currentWord} correctWord={"REFACTOR"} />
       <Keyboard />
-      <NewGameButton />
     </main>
   );
 }

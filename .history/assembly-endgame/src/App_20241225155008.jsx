@@ -21,7 +21,6 @@ export default function App() {
       <LanguageTags />
       <WordDisplay currentWord={currentWord} correctWord={"REFACTOR"} />
       <Keyboard />
-      <NewGameButton />
     </main>
   );
 }

@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: #262626;
+  color: #d9d9d9;
+  padding: 80px 40px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+}
+
+.game-title {
+  color: #f9f4da;
+}
+.game-description {
+  margin-top: 5px;
+  font-weight: 300;
+  color: #8e8e8e;
+  font-size: 0.875rem;
+  max-width: 350px;
+}
+
+/* status */
+.game-status {
+  background-color: #10a95b;
+  color: #f9f4da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 80px;
+  margin: 20px 0;
+  border-radius: 4px;
+  margin-block: 30px;
+}
+.game-status p {
+  margin-bottom: 5px;
+}
+.game-status h2 {
+  font-size: 1.25rem;
+  margin: 5px;
+}
+
+/* language tags */
+.language-tags-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  max-width: 350px;
+}

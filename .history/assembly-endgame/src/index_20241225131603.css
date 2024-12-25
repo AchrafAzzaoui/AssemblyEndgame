@@ -57,6 +57,7 @@ header {
 .language-tags-container {
   display: flex;
   justify-content: center;
+  margin-top: 25px;
   flex-wrap: wrap;
   gap: 2px;
   max-width: 350px;
@@ -73,66 +74,4 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* letter tiles and word container*/
-
-.word-display {
-  width: 100%;
-  max-width: 350px;
-  display: flex;
-  gap: 2px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.letter-tile {
-  background-color: #323232;
-  color: #fff;
-  padding: 0rem 1rem;
-  border-bottom: 1px solid #f9f4da;
-  min-width: 2rem;
-  text-align: center;
-  font-size: 1.25rem;
-  aspect-ratio: 1/1;
-}
-
-/* keyboard and letter buttons */
-.keyboard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 30px;
-}
-
-.letter-button {
-  background-color: #fcba29;
-  color: #1e1e1e;
-  padding: 0rem;
-  border: 0.5px solid white;
-  min-width: 3rem;
-  text-align: center;
-  font-size: 1rem;
-  aspect-ratio: 1/1;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  cursor: pointer;
-}
-
-/* New game button */
-
-.new-game-button {
-  background-color: #11b5e5;
-  border: 1px solid #d7d7d7;
-  border-radius: 4px;
-  width: 225px;
-  height: 40px;
-  padding: 6px 12px;
-  display: block;
-  margin-top: 30px;
-  cursor: pointer;
 }
