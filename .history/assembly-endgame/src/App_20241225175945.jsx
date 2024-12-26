@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { languages } from "./data/languages.js";
 import Status from "./components/Status.jsx";
 import LanguageTags from "./components/LanguageTags.jsx";
 import WordDisplay from "./components/WordDisplay.jsx";
@@ -13,12 +12,6 @@ export default function App() {
   const numWrongGuesses = guessedLetters.filter(
     (letter) => !correctWord.includes(letter)
   ).length;
-
-  const isGameLost = numWrongGuesses === languages.length - 1;
-  const isGameWon = correctWord
-    .split("")
-    .every((letter) => guessedLetters.includes(letter));
-  const isGameOver = isGameLost || isGameWon;
 
   function addGuessedLetter(letter) {
     setGuessedLetters((prevGussedLetters) => {
@@ -36,7 +29,7 @@ export default function App() {
           from Assembly!
         </p>
       </header>
-      <Status isGameLost={isGameLost} isGameWon={isGameWon} />
+      <Status />
       <LanguageTags numWrongGuesses={numWrongGuesses} />
       <WordDisplay
         correctWord={correctWord}
@@ -48,7 +41,7 @@ export default function App() {
         addGuessedLetter={addGuessedLetter}
         correctWord={correctWord}
       />
-      {isGameOver && <NewGameButton />}
+      <NewGameButton />
     </main>
   );
 }

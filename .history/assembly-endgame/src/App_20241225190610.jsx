@@ -36,7 +36,7 @@ export default function App() {
           from Assembly!
         </p>
       </header>
-      <Status isGameLost={isGameLost} isGameWon={isGameWon} />
+      <Status />
       <LanguageTags numWrongGuesses={numWrongGuesses} />
       <WordDisplay
         correctWord={correctWord}

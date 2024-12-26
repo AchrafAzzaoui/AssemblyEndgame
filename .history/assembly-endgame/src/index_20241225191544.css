@@ -36,6 +36,7 @@ header {
 .game-status {
   width: 100%;
   max-width: 450px;
+  background-color: #10a95b;
   color: #f9f4da;
   display: flex;
   flex-direction: column;
@@ -50,9 +51,6 @@ header {
 .game-status h2 {
   font-size: 1.25rem;
   /* margin: 5px; */
-}
-.game-status.won {
-  background-color: #10a95b;
 }
 .game-status.lost {
   background-color: #ba2a2a;

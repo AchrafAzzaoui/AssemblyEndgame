@@ -5,12 +5,11 @@ import { clsx } from "clsx";
 export default function LanguageTags({ numWrongGuesses }) {
   const languageTags = languages.map((language, index) => {
     const { name, backgroundColor, color } = language;
-    const isLanguageLost = index < numWrongGuesses;
     return (
       <div
         className={clsx({
           "language-tag": true,
-          lost: index < numWrongGuesses,
+          lost: index < numWrongGuesses - 1,
         })}
         style={{ backgroundColor: backgroundColor, color: color }}
       >

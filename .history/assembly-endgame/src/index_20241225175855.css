@@ -36,6 +36,7 @@ header {
 .game-status {
   width: 100%;
   max-width: 450px;
+  background-color: #10a95b;
   color: #f9f4da;
   display: flex;
   flex-direction: column;
@@ -51,12 +52,7 @@ header {
   font-size: 1.25rem;
   /* margin: 5px; */
 }
-.game-status.won {
-  background-color: #10a95b;
-}
-.game-status.lost {
-  background-color: #ba2a2a;
-}
+
 /* language tags */
 .language-tags-container {
   display: flex;
@@ -69,11 +65,8 @@ header {
 .language-tag {
   padding: 0.25rem 0.5rem;
   border-radius: 2px;
-  position: relative;
 }
-
 .language-tag.lost::before {
-  /* Changed from .lost::before to be more specific */
   content: "💀";
   position: absolute;
   display: flex;

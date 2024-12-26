@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { languages } from "./data/languages.js";
 import Status from "./components/Status.jsx";
 import LanguageTags from "./components/LanguageTags.jsx";
 import WordDisplay from "./components/WordDisplay.jsx";
@@ -10,17 +9,8 @@ export default function App() {
   const [correctWord, setCorrectWord] = useState("REFACTOR");
   const [guessedLetters, setGuessedLetters] = useState([]);
 
-  const numWrongGuesses = guessedLetters.filter(
-    (letter) => !correctWord.includes(letter)
-  ).length;
-
-  const isGameLost = numWrongGuesses === languages.length - 1;
-  const isGameWon = correctWord
-    .split("")
-    .every((letter) => guessedLetters.includes(letter));
-  const isGameOver = isGameLost || isGameWon;
-
   function addGuessedLetter(letter) {
+    console.log(letter);
     setGuessedLetters((prevGussedLetters) => {
       const prevLetters = new Set(prevGussedLetters);
       prevLetters.add(letter);
@@ -36,8 +26,8 @@ export default function App() {
           from Assembly!
         </p>
       </header>
-      <Status isGameLost={isGameLost} isGameWon={isGameWon} />
-      <LanguageTags numWrongGuesses={numWrongGuesses} />
+      <Status />
+      <LanguageTags />
       <WordDisplay
         correctWord={correctWord}
         guessedLetters={guessedLetters}
@@ -46,9 +36,8 @@ export default function App() {
       <Keyboard
         guessedLetters={guessedLetters}
         addGuessedLetter={addGuessedLetter}
-        correctWord={correctWord}
       />
-      {isGameOver && <NewGameButton />}
+      <NewGameButton />
     </main>
   );
 }

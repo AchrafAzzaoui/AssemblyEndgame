@@ -14,11 +14,9 @@ export default function App() {
     (letter) => !correctWord.includes(letter)
   ).length;
 
-  const isGameLost = numWrongGuesses === languages.length - 1;
-  const isGameWon = correctWord
-    .split("")
-    .every((letter) => guessedLetters.includes(letter));
-  const isGameOver = isGameLost || isGameWon;
+  const isGameOver =
+    numWrongGuesses === languages.length - 1 ||
+    correctWord.split("").every((letter) => guessedLetters.includes(letter));
 
   function addGuessedLetter(letter) {
     setGuessedLetters((prevGussedLetters) => {
@@ -36,7 +34,7 @@ export default function App() {
           from Assembly!
         </p>
       </header>
-      <Status isGameLost={isGameLost} isGameWon={isGameWon} />
+      <Status />
       <LanguageTags numWrongGuesses={numWrongGuesses} />
       <WordDisplay
         correctWord={correctWord}
